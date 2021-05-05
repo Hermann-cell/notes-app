@@ -32,7 +32,7 @@ class NoteController {
             })
             return response.redirect('/', 201)
         } catch (error) {
-            return response.redirect('/', 403, error.message())
+            return response.redirect('/', 403, error.message)
         }
 
     }
