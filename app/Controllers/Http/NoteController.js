@@ -25,15 +25,14 @@ class NoteController {
             return response.redirect('back')
         }
 
-        try {
+     
             await Note.create({
                 name: request.input('name'),
                 description: request.input('description')
             })
             return response.redirect('/', 201)
-        } catch (error) {
-            return response.redirect('/', 403)
-        }
+       
+        
 
     }
 }
